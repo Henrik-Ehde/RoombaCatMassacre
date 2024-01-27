@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ChristianLevelScene.unity
     guid: fea01ef9f02ff6d48bbb6931cbe46dfc
+  - enabled: 1
+    path: Assets/Scenes/HowTo.unity
+    guid: 866dcac8ede0fb74f8a763df241f78f6
   m_configObjects: {}

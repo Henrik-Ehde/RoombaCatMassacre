@@ -7,6 +7,7 @@ public class MainMenuButtons : MonoBehaviour
     public bool play = false;
     public bool howto = false;
     public bool quit = false;
+    public bool back = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,14 @@ public class MainMenuButtons : MonoBehaviour
             Debug.Log("Ping!");
         }
     }
+
+    public void Play() { Application.LoadLevel(1); }
+
+    public void HowTo() { Application.LoadLevel(2); }
+
+    public void Quit() { Application.Quit(); }
+
+    public void Back() { Application.LoadLevel(0); }
 
     public void OnMouseUp()
 {
@@ -39,6 +48,11 @@ public class MainMenuButtons : MonoBehaviour
     {
         Application.Quit();
     }
+
+    if (back)
+        {
+            Application.LoadLevel(0);
+        }
 
 }
 }
