@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed;
+    public float damage;
     
     // Start is called before the first frame update
     void Start()
@@ -20,11 +21,10 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collision with " +other);
         if (other.tag == "Enemy")
         {
-            Destroy(other.gameObject);
-            Destroy(this.gameObject);
+            other.GetComponent<BasicEnemyController>().Damage(damage);
+            Destroy(gameObject);
         }
 
     }

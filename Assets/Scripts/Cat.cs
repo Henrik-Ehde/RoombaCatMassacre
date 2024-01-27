@@ -14,6 +14,7 @@ public class Cat : MonoBehaviour
 
     public float rateOfFire;
     public float projectileSpeed;
+    public float projectileDamage;
     float nextShotTime;
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,7 @@ public class Cat : MonoBehaviour
         rotation = Mathf.Lerp(rotation, rotationSpeed * rotationDirection, smoothRotation * Time.deltaTime);
         cat.Rotate(0, rotation * Time.fixedDeltaTime, 0);
 
-        if (Input.GetKey(KeyCode.K) && Time.time > nextShotTime)
+        if (Input.GetAxis("Fire") != 0 && Time.time > nextShotTime)
         {
             Fire();
         }
@@ -39,6 +40,8 @@ public class Cat : MonoBehaviour
         nextShotTime = Time.time + 1 / rateOfFire;
         GameObject newProjectile = Instantiate(projectile, muzzle.position,transform.rotation);
         newProjectile.transform.forward = muzzle.up;
-        newProjectile.GetComponent<Bullet>().speed = projectileSpeed;
+        Bullet bullet = newProjectile.GetComponent<Bullet>();
+        bullet.speed = projectileSpeed;
+        bullet.damage = projectileDamage;
     }
 }
