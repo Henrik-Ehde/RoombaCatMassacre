@@ -18,24 +18,27 @@ public class Roomba : MonoBehaviour
 
     public TMP_Text livesText;
 
+    int currentPlayer=0;
+
 
 
     public float lives = 9;
     // Start is called before the first frame update
-    void Start()
+    public void SwapPlayer()
     {
-        
+        currentPlayer++;
+        currentPlayer %= 2;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        float rotationInput = Input.GetAxis("Horizontal");
+        float rotationInput = Input.GetAxis("Horizontal"+currentPlayer);
         rotation = Mathf.Lerp(rotation, rotationRate * rotationInput, smoothRotation * Time.deltaTime);
         transform.Rotate(0, rotation * Time.fixedDeltaTime, 0);
 
 
-        float verticalInput = Input.GetAxis("Vertical");
+        float verticalInput = Input.GetAxis("Vertical"+currentPlayer);
         float force;
         if (verticalInput < 0) force = reverseAcceleration * verticalInput;
         else force = acceleration * verticalInput;

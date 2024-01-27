@@ -336,7 +336,7 @@ MonoBehaviour:
   reverseAcceleration: 26
   speedWhileRotating: 0.2
   iFrames: 0.5
-  hittable: 0
+  hittable: 1
   livesText: {fileID: 0}
   lives: 9
 --- !u!114 &569952877278693276
@@ -352,6 +352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cat: {fileID: 569952876802984759}
+  roomba: {fileID: 569952877278693273}
   rotationSpeed: 250
   smoothRotation: 15
   muzzle: {fileID: 569952878145494967}
@@ -362,6 +363,8 @@ MonoBehaviour:
   maxAmmo: 20
   ammoRechargeRate: 2
   ammoVacuumRecharge: 16
+  minSwapTime: 10
+  maxSwapTime: 20
   fireSounds:
     outputAudioMixerGroup: {fileID: 0}
     useDefaultSettings: 1
