@@ -9,7 +9,6 @@ public class Roomba : MonoBehaviour
     public float rotationRate;
     public float smoothRotation;
     float rotation;
-    public float forwardSpeed;
     public float acceleration;
     public float reverseAcceleration;
     public float speedWhileRotating;

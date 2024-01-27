@@ -20,7 +20,7 @@ public class BasicEnemyController : MonoBehaviour
     public float smallAcceleration;
 
     public float maxHealth;
-    public float health;
+    float health;
 
     Vector3 originalScale;
     public float maxBigSize;
@@ -29,7 +29,7 @@ public class BasicEnemyController : MonoBehaviour
 
     Vector3 targetDirection;
 
-    public string state = "big";
+    string state = "big";
 
     public float fleeingTime;
     public float retryTime;
