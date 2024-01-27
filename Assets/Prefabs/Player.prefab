@@ -359,6 +359,7 @@ MonoBehaviour:
   projectile: {fileID: 868102411945244941, guid: cf26fa6865e1de148b6f742732695c15, type: 3}
   rateOfFire: 3
   projectileSpeed: 10
+  projectileDamage: 5
 --- !u!54 &569952877278693277
 Rigidbody:
   m_ObjectHideFlags: 0
