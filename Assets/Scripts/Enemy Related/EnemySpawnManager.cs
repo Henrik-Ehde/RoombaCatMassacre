@@ -5,16 +5,17 @@ using UnityEngine;
 
 public class EnemySpawnManager : MonoBehaviour
 {
-    public static event Action<GameObject, Transform> SpawnEnemiesEvent;
+    public static event Action<GameObject, Transform, Transform> SpawnEnemiesEvent;
 
     public GameObject enemyToSpawn;
     private GameObject player;
+    public Transform enemiesContainer;
 
     private void Start()
     {
         player = GameObject.Find("Player");
 
-        if (SpawnEnemiesEvent != null) SpawnEnemiesEvent(enemyToSpawn, player.transform);
+        if (SpawnEnemiesEvent != null) SpawnEnemiesEvent(enemyToSpawn, player.transform, enemiesContainer);
     }
 
 }

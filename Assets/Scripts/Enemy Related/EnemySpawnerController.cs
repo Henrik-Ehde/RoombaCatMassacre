@@ -10,10 +10,11 @@ public class EnemySpawnerController : MonoBehaviour
         EnemySpawnManager.SpawnEnemiesEvent += SpawnEnemy;
     }
 
-    private void SpawnEnemy(GameObject enemyToSpawn, Transform target)
+    private void SpawnEnemy(GameObject enemyToSpawn, Transform target, Transform enemyContainer)
     {
-        BasicEnemyController spawnedEnemyController = Instantiate(enemyToSpawn, transform.position, Quaternion.identity).GetComponent<BasicEnemyController>();
+        BasicEnemyController spawnedEnemyController = Instantiate(enemyToSpawn, transform.position, Quaternion.identity, enemyContainer).GetComponent<BasicEnemyController>();
         spawnedEnemyController.SetTarget(target);
+        spawnedEnemyController.enemyContainer = enemyContainer;
     }
 
 }

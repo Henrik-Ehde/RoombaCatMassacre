@@ -6,9 +6,12 @@ public class BasicEnemyController : MonoBehaviour
 {
     private Transform target;
     public Rigidbody rb;
+    public Transform friend;
+
+    [HideInInspector] public Transform enemyContainer;
 
     //public float moveSpeed = 5f;
-    private float moveSpeedActual;
+    //private float moveSpeedActual;
     public float collisionForce;
 
     Vector2 targetPosition;
@@ -26,7 +29,10 @@ public class BasicEnemyController : MonoBehaviour
 
     Vector3 targetDirection;
 
-    string state = "big";
+    public string state = "big";
+
+    public float fleeingTime;
+    public float retryTime;
 
 
 
@@ -47,6 +53,7 @@ public class BasicEnemyController : MonoBehaviour
 
         if (state == "big") BigBehaviour();
         else if (state == "fleeing") FleeingBehaviour();
+        else if (state == "converging") Converging();
 
         Vector3 lookRotation = Vector3.RotateTowards(transform.forward, targetDirection, 360, 0.5f);
         transform.rotation = Quaternion.LookRotation(lookRotation);
@@ -67,6 +74,15 @@ public class BasicEnemyController : MonoBehaviour
         targetDirection = (transform.position - target.position).normalized;
         rb.AddForce(targetDirection * smallAcceleration);
     }
+
+    void Converging()
+    {
+        Debug.Log(friend);
+        targetDirection = (friend.position - transform.position).normalized;
+        rb.AddForce(targetDirection * smallAcceleration);
+    }
+
+
     private void OnCollisionEnter(Collision collision)
     {
         GameObject other = collision.gameObject;
@@ -77,10 +93,7 @@ public class BasicEnemyController : MonoBehaviour
             {
                 other.GetComponentInParent<Roomba>().Damage();
 
-                // calculate force vector
                 Vector3 direction = (transform.position - other.transform.position).normalized;
-                // normalize force vector to get direction only and trim magnitude
-
 
                 other.GetComponentInParent<Rigidbody>().AddForce(-direction * collisionForce);
                 GetComponent<Rigidbody>().AddForce(direction * collisionForce);
@@ -88,9 +101,21 @@ public class BasicEnemyController : MonoBehaviour
 
             else
             {
-                Debug.Log("Dö");
                 Destroy(gameObject);
             }
+        }
+
+        else if (other.gameObject.tag == "Enemy")
+        {
+            BasicEnemyController otherEnemy = other.GetComponent<BasicEnemyController>();
+            if (state == "converging" && otherEnemy.state != "big")
+            {
+                Destroy(other.gameObject);
+                state = "big";
+                transform.localScale = originalScale;
+                health = maxHealth;
+            }
+
         }
  
     }
@@ -106,9 +131,33 @@ public class BasicEnemyController : MonoBehaviour
     public void Shrink()
     {
         transform.localScale = originalScale * smallSize;
-        state = "small";
+        state = "fleeing";
+        StartCoroutine(FindAFriend(fleeingTime));
     }
 
 
+    IEnumerator FindAFriend(float waitTime)
+    {
+        Debug.Log("Finding friend");
+        friend = null;
+        yield return new WaitForSeconds(waitTime);
 
+        float smallestDistance = Mathf.Infinity;
+        foreach (Transform otherTransform in enemyContainer)
+        {
+            if (otherTransform != transform)
+            {
+                BasicEnemyController other = otherTransform.GetComponent<BasicEnemyController>();
+                float distance = Vector3.Distance(transform.position, otherTransform.position);
+                if (other.state != "big" && distance < smallestDistance)
+                {
+                    friend = otherTransform;
+                    smallestDistance = distance;
+                }
+            }
+        }
+
+        if (friend == null) StartCoroutine(FindAFriend(retryTime));
+        else state = "converging";
+    }
 }

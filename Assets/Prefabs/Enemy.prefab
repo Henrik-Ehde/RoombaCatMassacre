@@ -113,6 +113,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: -3487863493074568607}
+  friend: {fileID: 0}
+  enemyContainer: {fileID: 0}
   collisionForce: 300
   bigAcceleration: 5
   smallAcceleration: 3
@@ -121,6 +123,9 @@ MonoBehaviour:
   maxBigSize: 1
   minBigSize: 0.7
   smallSize: 0.3
+  state: big
+  fleeingTime: 5
+  retryTime: 3
 --- !u!54 &-3487863493074568607
 Rigidbody:
   m_ObjectHideFlags: 0

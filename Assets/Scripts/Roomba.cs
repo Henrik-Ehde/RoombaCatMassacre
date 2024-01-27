@@ -51,8 +51,8 @@ public class Roomba : MonoBehaviour
         if (hittable)
         {
             lives -= 1;
-            if (lives< 1) Die();
-            livesText.text = "Lives: " + lives;
+            //if (lives< 1) Die();
+            //livesText.text = "Lives: " + lives;
             StartCoroutine(Invulnerable());
         }
     }
