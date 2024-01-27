@@ -16,7 +16,7 @@ public class BasicEnemyController : MonoBehaviour
     //private float moveSpeedActual;
     public float collisionForce;
 
-    Vector2 targetPosition;
+    public Vector3 targetPosition;
 
     public float bigAcceleration;
     public float smallAcceleration;
@@ -31,10 +31,16 @@ public class BasicEnemyController : MonoBehaviour
 
     Vector3 targetDirection;
 
+
     string state = "big";
 
     public float fleeingTime;
     public float retryTime;
+
+    [Header("Random Movement")]
+    public float maxRandomOffset;
+    float randomPositionTime;
+    public float randomPositionInterval;
 
 
 
@@ -50,8 +56,21 @@ public class BasicEnemyController : MonoBehaviour
         target = newTarget;
     }
 
+
+    void RandomPosition()
+    {
+        Vector2 randomCircle = Random.insideUnitCircle;
+        targetPosition = target.position + new Vector3(randomCircle.x, 0, randomCircle.y) * maxRandomOffset;
+        randomPositionTime = Time.time + randomPositionInterval;
+
+    }
+
+
+
     private void FixedUpdate()
     {
+        float distance = Vector3.Distance(transform.position, targetPosition);
+        if (distance < 1 || Time.time > randomPositionTime) RandomPosition();
 
         if (state == "big") BigBehaviour();
         else if (state == "fleeing") FleeingBehaviour();
@@ -67,13 +86,13 @@ public class BasicEnemyController : MonoBehaviour
 
     void BigBehaviour()
     {
-        targetDirection = (target.position - transform.position).normalized;
+        targetDirection = (targetPosition - transform.position).normalized;
         rb.AddForce(targetDirection * bigAcceleration);
     }
 
     void FleeingBehaviour()
     {
-        targetDirection = (transform.position - target.position).normalized;
+        targetDirection = (transform.position - targetPosition).normalized;
         rb.AddForce(targetDirection * smallAcceleration);
     }
 
@@ -89,6 +108,8 @@ public class BasicEnemyController : MonoBehaviour
         
 
     }
+
+
 
 
     private void OnCollisionEnter(Collision collision)

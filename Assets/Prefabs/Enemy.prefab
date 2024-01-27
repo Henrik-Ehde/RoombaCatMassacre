@@ -109,6 +109,8 @@ MonoBehaviour:
   smallSize: 0.3
   fleeingTime: 5
   retryTime: 3
+  maxRandomOffset: 5
+  randomPositionInterval: 3
 --- !u!54 &-3487863493074568607
 Rigidbody:
   m_ObjectHideFlags: 0
