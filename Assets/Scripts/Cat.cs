@@ -13,6 +13,7 @@ public class Cat : MonoBehaviour
     public GameObject projectile;
 
     public float rateOfFire;
+    public float projectileSpeed;
     float nextShotTime;
     // Start is called before the first frame update
     void Start()
@@ -38,5 +39,6 @@ public class Cat : MonoBehaviour
         nextShotTime = Time.time + 1 / rateOfFire;
         GameObject newProjectile = Instantiate(projectile, muzzle.position,transform.rotation);
         newProjectile.transform.forward = muzzle.up;
+        newProjectile.GetComponent<Bullet>().speed = projectileSpeed;
     }
 }
