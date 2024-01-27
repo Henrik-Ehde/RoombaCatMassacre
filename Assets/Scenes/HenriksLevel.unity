@@ -1842,10 +1842,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5202851640821681481, guid: 312768d0ba4ac374fb23b89dd2397190, type: 3}
-      propertyPath: spawnInterval
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5202851640821681481, guid: 312768d0ba4ac374fb23b89dd2397190, type: 3}
       propertyPath: enemiesContainer
       value: 
       objectReference: {fileID: 1529542144}

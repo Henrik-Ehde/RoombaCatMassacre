@@ -17,12 +17,17 @@ public class Cat : MonoBehaviour
     public float projectileDamage;
     float nextShotTime;
 
+    public float maxAmmo;
+    public float ammo;
+    public float ammoRechargeRate;
+    public float ammoVacuumRecharge;
+
     public SoundContainer fireSounds;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        ammo = maxAmmo;
     }
 
     // Update is called once per frame
@@ -32,14 +37,23 @@ public class Cat : MonoBehaviour
         rotation = Mathf.Lerp(rotation, rotationSpeed * rotationDirection, smoothRotation * Time.deltaTime);
         cat.Rotate(0, rotation * Time.fixedDeltaTime, 0);
 
-        if (Input.GetAxis("Fire") != 0 && Time.time > nextShotTime)
+        ammo += ammoRechargeRate * Time.fixedDeltaTime;
+        if (ammo > maxAmmo) ammo = maxAmmo;
+
+        if (Input.GetAxis("Fire") != 0 && Time.time > nextShotTime && ammo > 1)
         {
             Fire();
         }
     }
 
+    public void VacuumRecharge()
+    {
+        ammo += ammoVacuumRecharge;
+    }
+
     private void Fire()
     {
+        ammo--;
         nextShotTime = Time.time + 1 / rateOfFire;
         GameObject newProjectile = Instantiate(projectile, muzzle.position,transform.rotation);
         newProjectile.transform.forward = muzzle.up;

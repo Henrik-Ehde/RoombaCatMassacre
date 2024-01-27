@@ -14,7 +14,11 @@ public class EnemySpawnManager : MonoBehaviour
     public Transform enemiesContainer;
     public Transform spawnerContainer;
 
-    public float spawnInterval;
+    //public float spawnInterval;
+
+    [Header("Enemies Spawned per 10s")]
+    public float spawnRate;
+    public float rateIncrease;
 
     private void Start()
     {
@@ -35,7 +39,9 @@ public class EnemySpawnManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(spawnInterval);
+            float waitTime = 1 / (spawnRate * 0.1f);
+            yield return new WaitForSeconds(waitTime);
+            spawnRate += waitTime * rateIncrease * 0.1f;
             SpawnEnemy();
         }
     }

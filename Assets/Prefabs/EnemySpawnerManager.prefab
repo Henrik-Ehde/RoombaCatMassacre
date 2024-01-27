@@ -44,4 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b215c49d35e42b49b87846cb0b10272, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnerList: []
   enemyToSpawn: {fileID: 4454938411214849698, guid: c8c2affdbc108d143b79269d923bdea4, type: 3}
+  enemiesContainer: {fileID: 0}
+  spawnerContainer: {fileID: 0}
+  spawnRate: 2
+  rateIncrease: 0.35

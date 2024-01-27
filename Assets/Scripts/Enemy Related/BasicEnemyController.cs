@@ -130,6 +130,7 @@ public class BasicEnemyController : MonoBehaviour
 
             else
             {
+                other.GetComponentInParent<Cat>().VacuumRecharge();
                 Destroy(gameObject);
             }
         }
