@@ -102,14 +102,12 @@ MonoBehaviour:
   friend: {fileID: 0}
   enemyContainer: {fileID: 0}
   collisionForce: 300
-  bigAcceleration: 5
-  smallAcceleration: 3
+  bigAcceleration: 16
+  smallAcceleration: 8
   maxHealth: 20
-  health: 0
   maxBigSize: 1
   minBigSize: 0.7
   smallSize: 0.3
-  state: big
   fleeingTime: 5
   retryTime: 3
 --- !u!54 &-3487863493074568607

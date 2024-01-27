@@ -900,6 +900,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 569952877278693273, guid: 643f10579a1b36e41ae44cc040df90ad, type: 3}
+      propertyPath: hittable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 569952877278693273, guid: 643f10579a1b36e41ae44cc040df90ad, type: 3}
+      propertyPath: acceleration
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 569952877278693273, guid: 643f10579a1b36e41ae44cc040df90ad, type: 3}
+      propertyPath: forwardSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 569952877278693273, guid: 643f10579a1b36e41ae44cc040df90ad, type: 3}
+      propertyPath: smoothRotation
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 569952877278693273, guid: 643f10579a1b36e41ae44cc040df90ad, type: 3}
+      propertyPath: speedWhileRotating
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 569952877278693276, guid: 643f10579a1b36e41ae44cc040df90ad, type: 3}
       propertyPath: projectileSpeed
       value: 10
