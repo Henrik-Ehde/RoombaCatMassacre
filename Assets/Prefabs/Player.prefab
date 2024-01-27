@@ -335,7 +335,7 @@ MonoBehaviour:
   forwardSpeed: 8
   acceleration: 30
   reverseAcceleration: 18
-  reverseSpeed: 7
+  speedWhileRotating: 0.5
   iFrames: 0.5
   hittable: 1
   livesText: {fileID: 0}

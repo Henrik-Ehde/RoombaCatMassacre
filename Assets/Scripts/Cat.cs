@@ -23,9 +23,7 @@ public class Cat : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        float rotationDirection=0;
-        if (Input.GetKey(KeyCode.J)) rotationDirection += 1;
-        if (Input.GetKey(KeyCode.L)) rotationDirection -= 1;
+        float rotationDirection = Input.GetAxis("CatRotation");
         rotation = Mathf.Lerp(rotation, rotationSpeed * rotationDirection, smoothRotation * Time.deltaTime);
         cat.Rotate(0, rotation * Time.fixedDeltaTime, 0);
 

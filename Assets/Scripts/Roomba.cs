@@ -12,7 +12,7 @@ public class Roomba : MonoBehaviour
     public float forwardSpeed;
     public float acceleration;
     public float reverseAcceleration;
-    public float reverseSpeed;
+    public float speedWhileRotating;
 
     public float iFrames;
     public bool hittable;
@@ -32,23 +32,18 @@ public class Roomba : MonoBehaviour
     void FixedUpdate()
     {
         float rotationInput = Input.GetAxis("Horizontal");
-        Debug.Log(rotationInput);
         rotation = Mathf.Lerp(rotation, rotationRate * rotationInput, smoothRotation * Time.deltaTime);
         transform.Rotate(0, rotation * Time.fixedDeltaTime, 0);
 
 
-        if (Input.GetKey(KeyCode.W))
-        {
-            //rb.MovePosition(transform.position + transform.forward * Time.fixedDeltaTime * forwardSpeed);
-            rb.AddForce(transform.forward * acceleration);
-        }
+        float verticalInput = Input.GetAxis("Vertical");
+        float force;
+        if (verticalInput < 0) force = reverseAcceleration * verticalInput;
+        else force = acceleration * verticalInput;
 
-        if (Input.GetKey(KeyCode.S))
-        {
-            //rb.MovePosition(transform.position - transform.forward * Time.fixedDeltaTime * reverseSpeed);
-            rb.AddForce(-transform.forward * reverseAcceleration);
+        if (rotationInput != 0) force *= speedWhileRotating;
 
-        }
+        rb.AddForce(transform.forward * force);
     }
 
     public void Damage()
