@@ -6,7 +6,9 @@ public class BasicEnemyController : MonoBehaviour
 {
     private Transform target;
     public Rigidbody rb;
-    public Transform friend;
+
+    Transform friend;
+    BasicEnemyController friendController;
 
     [HideInInspector] public Transform enemyContainer;
 
@@ -77,9 +79,15 @@ public class BasicEnemyController : MonoBehaviour
 
     void Converging()
     {
-        Debug.Log(friend);
-        targetDirection = (friend.position - transform.position).normalized;
-        rb.AddForce(targetDirection * smallAcceleration);
+        if (friend && friendController.state != "big")
+        {
+            targetDirection = (friend.position - transform.position).normalized;
+            rb.AddForce(targetDirection * smallAcceleration);
+        }
+
+        else FindAFriend(0);
+        
+
     }
 
 
@@ -138,7 +146,6 @@ public class BasicEnemyController : MonoBehaviour
 
     IEnumerator FindAFriend(float waitTime)
     {
-        Debug.Log("Finding friend");
         friend = null;
         yield return new WaitForSeconds(waitTime);
 
@@ -152,6 +159,7 @@ public class BasicEnemyController : MonoBehaviour
                 if (other.state != "big" && distance < smallestDistance)
                 {
                     friend = otherTransform;
+                    friendController = other;
                     smallestDistance = distance;
                 }
             }
