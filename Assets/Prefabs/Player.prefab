@@ -332,9 +332,9 @@ MonoBehaviour:
   rb: {fileID: 569952877278693277}
   rotationRate: 130
   smoothRotation: 50
-  acceleration: 30
+  acceleration: 60
   reverseAcceleration: 18
-  speedWhileRotating: 0.5
+  speedWhileRotating: 0.2
   iFrames: 0.5
   hittable: 1
   livesText: {fileID: 0}
