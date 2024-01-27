@@ -99,7 +99,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: -3487863493074568607}
-  friend: {fileID: 0}
   enemyContainer: {fileID: 0}
   collisionForce: 300
   bigAcceleration: 16
