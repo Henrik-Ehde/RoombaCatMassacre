@@ -330,13 +330,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 569952877278693277}
-  rotationRate: 130
+  rotationRate: 100
   smoothRotation: 50
   acceleration: 60
-  reverseAcceleration: 18
+  reverseAcceleration: 26
   speedWhileRotating: 0.2
   iFrames: 0.5
-  hittable: 1
+  hittable: 0
   livesText: {fileID: 0}
   lives: 9
 --- !u!114 &569952877278693276
@@ -352,12 +352,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cat: {fileID: 569952876802984759}
-  rotationSpeed: 250
+  rotationSpeed: 400
   smoothRotation: 50
   muzzle: {fileID: 569952878145494967}
   projectile: {fileID: 868102411945244941, guid: cf26fa6865e1de148b6f742732695c15, type: 3}
-  rateOfFire: 3
-  projectileSpeed: 10
+  rateOfFire: 6
+  projectileSpeed: 15
   projectileDamage: 8
   fireSounds:
     outputAudioMixerGroup: {fileID: 0}
