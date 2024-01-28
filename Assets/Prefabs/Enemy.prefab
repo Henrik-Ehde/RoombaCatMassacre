@@ -132,11 +132,9 @@ MonoBehaviour:
     audioSourceInUse: {fileID: 0}
     containerName: HurtSounds
     clipsInContainer:
-    - {fileID: 8300000, guid: 9d997b0af2a89cf4cb23c6623ac45681, type: 3}
-    - {fileID: 8300000, guid: e431f27cc3859d84981a9c7f41884097, type: 3}
-    - {fileID: 8300000, guid: be26feef33d20224b99e640354e12a0f, type: 3}
-    - {fileID: 8300000, guid: bd2060efbc1acb541babeab4e761ef57, type: 3}
-    - {fileID: 8300000, guid: 1c78c7435ec489240a9101973f8b6c20, type: 3}
+    - {fileID: 8300000, guid: 95b242e7ef8da8c4da909fb53b604e6a, type: 3}
+    - {fileID: 8300000, guid: aaca2de7ea0f1674db091683ff7d82be, type: 3}
+    - {fileID: 8300000, guid: 62a55a5c11f79274f8384658f4dc9a81, type: 3}
     containerType: 3
     loopContainer: 0
     isPlaying: 0
@@ -158,7 +156,25 @@ MonoBehaviour:
       bufferTime: 0
       lastTriggeredTime: 50000
     audioSourceInUse: {fileID: 0}
-    audioClip: {fileID: 8300000, guid: 619ff2fc4e9668847b1dccbbc2f98f01, type: 3}
+    audioClip: {fileID: 8300000, guid: c42db8c9c40a28d4d8da917d363c5af7, type: 3}
+  combineSound:
+    outputAudioMixerGroup: {fileID: -2943796677340469798, guid: 7aa78db08ded64c47bf4c1777f41e336, type: 2}
+    useDefaultSettings: 1
+    soundSettings:
+      priority: 128
+      loop: 0
+      volume: 1
+      randomizeVolume: 0
+      volumeRandomRange: {x: 0.8, y: 1}
+      pitch: 1
+      randomizePitch: 0
+      pitchRandomRange: {x: 0.8, y: 1.1}
+      spatialBlend: 0.5
+      spread: 0
+      bufferTime: 0
+      lastTriggeredTime: 50000
+    audioSourceInUse: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: ba4833c47a5fa3d4a80915d09ad33069, type: 3}
 --- !u!54 &-3487863493074568607
 Rigidbody:
   m_ObjectHideFlags: 0

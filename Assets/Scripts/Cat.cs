@@ -38,6 +38,7 @@ public class Cat : MonoBehaviour
     bool spraying = false;
 
     public SoundContainer fireSounds;
+    public BasicSound swapAnnounceSound, ramboFireSound, vaccuumReadySound, dashSound, suckSound;
 
     // Start is called before the first frame update
     void Start()
@@ -52,8 +53,12 @@ public class Cat : MonoBehaviour
         
         while (true)
         {
-            float swapTime = Random.Range(minSwapTime, maxSwapTime);
-            yield return new WaitForSeconds(swapTime);
+            float sfxTime = Random.Range(minSwapTime, maxSwapTime) - 3;
+            yield return new WaitForSeconds(sfxTime);
+
+            AudioManager.Instance.PlaySoundBaseOnTarget(swapAnnounceSound, AudioManager.Instance.transform, true);
+
+            yield return new WaitForSeconds(3);
 
             SwapPlayer();
         }
@@ -97,13 +102,25 @@ public class Cat : MonoBehaviour
 
     void Dash()
     {
+        AudioManager.Instance.PlaySoundBaseOnTarget(dashSound, transform, true);
+
         float direction = Input.GetAxis("Special" + currentPlayer);
         roomba.Dash(dashForce, direction);
         dashReadyTime = Time.time + dashCooldown;
+        StartCoroutine(DashCooldown());
+
+    }
+
+    IEnumerator DashCooldown()
+    {
+        yield return new WaitForSeconds(dashCooldown);
+        AudioManager.Instance.PlaySoundBaseOnTarget(vaccuumReadySound, AudioManager.Instance.transform, true);
     }
 
     public IEnumerator Spray(float duration, int shots, float spread, float direction)
     {
+        AudioManager.Instance.PlaySoundBaseOnTarget(ramboFireSound, transform, true);
+
         spraying = true;
         float t = 0;
         float nextShotTime = 0;
@@ -131,6 +148,9 @@ public class Cat : MonoBehaviour
 
         kills++;
         killsText.text = kills + " dust rats murdered";
+
+        AudioManager.Instance.PlaySoundBaseOnTarget(suckSound, transform, true);
+
     }
 
     private void Fire()

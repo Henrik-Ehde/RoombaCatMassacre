@@ -43,7 +43,7 @@ public class BasicEnemyController : MonoBehaviour
     public float randomPositionInterval;
 
     public SoundContainer hurtSounds;
-    public BasicSound deathSound;
+    public BasicSound deathSound, combineSound;
 
 
 
@@ -151,6 +151,9 @@ public class BasicEnemyController : MonoBehaviour
                 state = "big";
                 transform.localScale = originalScale;
                 health = maxHealth;
+
+                AudioManager.Instance.PlaySoundBaseAtPos(combineSound, transform.position, transform.name);
+
             }
 
         }
@@ -169,6 +172,8 @@ public class BasicEnemyController : MonoBehaviour
 
     public void Shrink()
     {
+        AudioManager.Instance.PlaySoundBaseOnTarget(deathSound, transform, true);
+
         transform.localScale = originalScale * smallSize;
         state = "fleeing";
         StartCoroutine(FindAFriend(fleeingTime));

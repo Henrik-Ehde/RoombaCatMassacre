@@ -30,6 +30,9 @@ public class Roomba : MonoBehaviour
     public float cooldown;
     float sprayReadyTime;
 
+    public SoundContainer hurtSounds;
+    public BasicSound gameOverSound;
+
 
     public void SwapPlayer()
     {
@@ -64,6 +67,8 @@ public class Roomba : MonoBehaviour
     {
         if (hittable)
         {
+            AudioManager.Instance.PlaySoundBaseOnTarget(hurtSounds, transform, true);
+
             lives -= 1;
             if (lives< 1) Die();
             livesText.text = lives + " lives";
@@ -95,5 +100,6 @@ public class Roomba : MonoBehaviour
     void Die()
     {
         Time.timeScale = 0;
+        AudioManager.Instance.PlaySoundBaseOnTarget(gameOverSound, AudioManager.Instance.transform, true);
     }
 }
