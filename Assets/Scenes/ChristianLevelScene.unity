@@ -939,6 +939,22 @@ PrefabInstance:
       propertyPath: smoothRotation
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 569952877278693276, guid: 643f10579a1b36e41ae44cc040df90ad, type: 3}
+      propertyPath: fireSounds.useDefaultSettings
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 569952877278693276, guid: 643f10579a1b36e41ae44cc040df90ad, type: 3}
+      propertyPath: fireSounds.soundSettings.spread
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 569952877278693276, guid: 643f10579a1b36e41ae44cc040df90ad, type: 3}
+      propertyPath: fireSounds.outputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -2943796677340469798, guid: 7aa78db08ded64c47bf4c1777f41e336, type: 2}
+    - target: {fileID: 569952877278693276, guid: 643f10579a1b36e41ae44cc040df90ad, type: 3}
+      propertyPath: fireSounds.soundSettings.spatialBlend
+      value: 0.185
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 643f10579a1b36e41ae44cc040df90ad, type: 3}
 --- !u!1 &284119291
@@ -4935,6 +4951,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1575860575}
   - component: {fileID: 1575860574}
+  - component: {fileID: 1575860576}
   m_Layer: 0
   m_Name: Audio Box
   m_TagString: Untagged
@@ -4954,7 +4971,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c2593d09268aa3a44b94b6b7cc164c41, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.219
+  m_Volume: 0.081
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5045,14 +5062,22 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1575860573}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.900467, y: -32.5324, z: -16.445536}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 0.99945265, z: -0, w: -0.03308276}
+  m_LocalPosition: {x: -4.090063, y: 2.8249989, z: 12.490019}
+  m_LocalScale: {x: 1.7417171, y: 0.04314316, z: 1.7417171}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 183.792, z: 0}
+--- !u!81 &1575860576
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575860573}
+  m_Enabled: 1
 --- !u!1 &1603908314
 GameObject:
   m_ObjectHideFlags: 0
@@ -6424,7 +6449,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980375162}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1980375164
 Camera:
   m_ObjectHideFlags: 0
@@ -6580,46 +6605,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2012353184}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &2015446574
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2015446576}
-  - component: {fileID: 2015446575}
-  m_Layer: 0
-  m_Name: Audio Listener
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &2015446575
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015446574}
-  m_Enabled: 0
---- !u!4 &2015446576
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015446574}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.900467, y: -32.5324, z: -16.445536}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2036683067 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 683072039539953248, guid: 0e8dab17d27a5594fb99732d8472e997, type: 3}

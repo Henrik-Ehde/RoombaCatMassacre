@@ -42,6 +42,9 @@ public class BasicEnemyController : MonoBehaviour
     float randomPositionTime;
     public float randomPositionInterval;
 
+    public SoundContainer hurtSounds;
+    public BasicSound deathSound;
+
 
 
     private void Start()
@@ -132,6 +135,9 @@ public class BasicEnemyController : MonoBehaviour
             {
                 other.GetComponentInParent<Cat>().VacuumRecharge();
                 Destroy(gameObject);
+
+                AudioManager.Instance.PlaySoundBaseAtPos(deathSound, transform.position, transform.name);
+
             }
         }
 
@@ -152,6 +158,8 @@ public class BasicEnemyController : MonoBehaviour
 
     public void Damage(float damage)
     {
+        AudioManager.Instance.PlaySoundBaseOnTarget(hurtSounds, transform, true);
+
         health -= damage;
 
         if (health <= 0) Shrink();
