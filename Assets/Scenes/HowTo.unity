@@ -589,7 +589,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 88.507, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 34.88, y: -21.54}
+  m_AnchoredPosition: {x: 29.119999, y: -21.54}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &788568354
@@ -615,7 +615,7 @@ MonoBehaviour:
   m_text: 'Cat Controls: J + L / Left Joystick = Aim Left & Right
 
     K Key / X
-    / A = Shoot'
+    / A = Shoot, U + O / Triggers = Sidedash'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -649,7 +649,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1374,7 +1374,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 88.507, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 34.88, y: -21.5}
+  m_AnchoredPosition: {x: 29.119999, y: -21.5}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1722986799
@@ -1397,8 +1397,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Roomba Controls: A + D Keys / Left Joystick = Turn Left & Right\nW Key
-    / X / A = Accelerate \nS Key / O / B = Reverse"
+  m_text: 'Roomba Controls: A + D Keys / Left Joystick = Turn Left & Right
+
+    W
+    Key / X / A = Accelerate, S Key / O / B = Reverse
+
+    Q + E / Triggers = Special
+    Attack'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1432,7 +1437,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1549,7 +1554,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 88.507, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 34.98, y: -21.49}
+  m_AnchoredPosition: {x: 34.74, y: -21.49}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &1797277970
@@ -1601,12 +1606,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The Dust Bunnies have become Dust Rats! Fend off the onslaught as the
-    Cat and his trusty Roomba steed! The Cat shoots the rats to make them shrink
-    enough for the Roomba to vacuum them up! Watch out, the roles switch often! Survive
-    until your owner gets home!
-
-'
+  m_text: The Dust Bunnies have become Dust Rats! Fend off the onslaught as the Cat
+    and his trusty Roomba steed! The Cat shoots the rats to make them shrink enough
+    for the Roomba to vacuum them up! Watch out, the roles switch often! Survive
+    as long as you can!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1640,7 +1643,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
