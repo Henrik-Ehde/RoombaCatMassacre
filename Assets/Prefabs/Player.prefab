@@ -332,18 +332,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 569952877278693277}
   cat: {fileID: 569952877278693276}
-  rotationRate: 120
-  smoothRotation: 50
-  acceleration: 60
-  reverseAcceleration: 26
+  rotationRate: 300
+  smoothRotation: 120
+  acceleration: 90
+  reverseAcceleration: 50
   speedWhileRotating: 0.2
-  iFrames: 0.5
-  hittable: 1
+  iFrames: 1
+  hittable: 0
   lives: 9
   livesText: {fileID: 0}
   duration: 0.7
   shots: 10
-  spread: 90
+  spread: 60
   cooldown: 4
 --- !u!114 &569952877278693276
 MonoBehaviour:
@@ -364,7 +364,7 @@ MonoBehaviour:
   muzzle: {fileID: 569952878145494967}
   projectile: {fileID: 868102411945244941, guid: cf26fa6865e1de148b6f742732695c15, type: 3}
   rateOfFire: 6
-  projectileSpeed: 15
+  projectileSpeed: 40
   projectileDamage: 8
   maxAmmo: 20
   ammoRechargeRate: 2
