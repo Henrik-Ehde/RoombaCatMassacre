@@ -1074,6 +1074,10 @@ PrefabInstance:
       propertyPath: livesText
       value: 
       objectReference: {fileID: 223958620}
+    - target: {fileID: 569952877278693277, guid: 643f10579a1b36e41ae44cc040df90ad, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 643f10579a1b36e41ae44cc040df90ad, type: 3}
 --- !u!1 &284119291
@@ -3063,8 +3067,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.560308, z: 1}
+  m_Center: {x: 0, y: -0.28015348, z: 0}
 --- !u!23 &828614919
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3225,8 +3229,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.9999999, y: 1.6108849, z: 1}
+  m_Center: {x: 0, y: -0.30544153, z: 0}
 --- !u!23 &871175754
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4631,8 +4635,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.6102839, z: 1}
+  m_Center: {x: 0, y: -0.30514127, z: 0}
 --- !u!23 &1461721229
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4922,8 +4926,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.9999999, y: 1.6195363, z: 1}
+  m_Center: {x: 0, y: -0.30976698, z: 0}
 --- !u!23 &1477937842
 MeshRenderer:
   m_ObjectHideFlags: 0
