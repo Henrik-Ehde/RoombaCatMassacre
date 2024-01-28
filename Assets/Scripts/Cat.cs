@@ -16,6 +16,9 @@ public class Cat : MonoBehaviour
     public float projectileSpeed;
     public float projectileDamage;
     float nextShotTime;
+
+    public SoundContainer fireSounds;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,5 +46,8 @@ public class Cat : MonoBehaviour
         Bullet bullet = newProjectile.GetComponent<Bullet>();
         bullet.speed = projectileSpeed;
         bullet.damage = projectileDamage;
+
+        AudioManager.Instance.PlaySoundBaseOnTarget(fireSounds, transform, true);
+
     }
 }
