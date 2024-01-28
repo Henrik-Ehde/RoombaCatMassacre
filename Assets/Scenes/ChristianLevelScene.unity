@@ -245,7 +245,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 75047614}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.23, y: -9.865471, z: 4.4}
+  m_LocalPosition: {x: 7.66, y: -9.865471, z: -2.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -272,6 +272,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawner (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 683072039539953054, guid: 0e8dab17d27a5594fb99732d8472e997, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 683072039539953055, guid: 0e8dab17d27a5594fb99732d8472e997, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -282,7 +286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 683072039539953248, guid: 0e8dab17d27a5594fb99732d8472e997, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.64
+      value: 5.74
       objectReference: {fileID: 0}
     - target: {fileID: 683072039539953248, guid: 0e8dab17d27a5594fb99732d8472e997, type: 3}
       propertyPath: m_LocalPosition.y
@@ -290,7 +294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 683072039539953248, guid: 0e8dab17d27a5594fb99732d8472e997, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 32.17
+      value: 22.04
       objectReference: {fileID: 0}
     - target: {fileID: 683072039539953248, guid: 0e8dab17d27a5594fb99732d8472e997, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1456,7 +1460,7 @@ GameObject:
   - component: {fileID: 402420452}
   - component: {fileID: 402420451}
   - component: {fileID: 402420450}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2255,7 +2259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 683072039539953248, guid: 0e8dab17d27a5594fb99732d8472e997, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.49
+      value: 9.4
       objectReference: {fileID: 0}
     - target: {fileID: 683072039539953248, guid: 0e8dab17d27a5594fb99732d8472e997, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2263,7 +2267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 683072039539953248, guid: 0e8dab17d27a5594fb99732d8472e997, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.32
+      value: -6.1
       objectReference: {fileID: 0}
     - target: {fileID: 683072039539953248, guid: 0e8dab17d27a5594fb99732d8472e997, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2573,7 +2577,7 @@ GameObject:
   - component: {fileID: 654092291}
   - component: {fileID: 654092290}
   - component: {fileID: 654092289}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2810,7 +2814,7 @@ GameObject:
   - component: {fileID: 828614920}
   - component: {fileID: 828614919}
   - component: {fileID: 828614918}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2906,6 +2910,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawner (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 683072039539953054, guid: 0e8dab17d27a5594fb99732d8472e997, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 683072039539953055, guid: 0e8dab17d27a5594fb99732d8472e997, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -2916,7 +2924,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 683072039539953248, guid: 0e8dab17d27a5594fb99732d8472e997, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.39
+      value: 41.86
       objectReference: {fileID: 0}
     - target: {fileID: 683072039539953248, guid: 0e8dab17d27a5594fb99732d8472e997, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2968,7 +2976,7 @@ GameObject:
   - component: {fileID: 871175755}
   - component: {fileID: 871175754}
   - component: {fileID: 871175753}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4201,6 +4209,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawner (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 683072039539953054, guid: 0e8dab17d27a5594fb99732d8472e997, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 683072039539953055, guid: 0e8dab17d27a5594fb99732d8472e997, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -4211,7 +4223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 683072039539953248, guid: 0e8dab17d27a5594fb99732d8472e997, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41.12
+      value: 42.66
       objectReference: {fileID: 0}
     - target: {fileID: 683072039539953248, guid: 0e8dab17d27a5594fb99732d8472e997, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4219,7 +4231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 683072039539953248, guid: 0e8dab17d27a5594fb99732d8472e997, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.12
+      value: -9.48
       objectReference: {fileID: 0}
     - target: {fileID: 683072039539953248, guid: 0e8dab17d27a5594fb99732d8472e997, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4370,7 +4382,7 @@ GameObject:
   - component: {fileID: 1461721230}
   - component: {fileID: 1461721229}
   - component: {fileID: 1461721228}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4661,7 +4673,7 @@ GameObject:
   - component: {fileID: 1477937843}
   - component: {fileID: 1477937842}
   - component: {fileID: 1477937841}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5576,7 +5588,7 @@ GameObject:
   - component: {fileID: 1739475437}
   - component: {fileID: 1739475436}
   - component: {fileID: 1739475435}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5673,7 +5685,7 @@ GameObject:
   - component: {fileID: 1763474469}
   - component: {fileID: 1763474468}
   - component: {fileID: 1763474467}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6817,7 +6829,7 @@ GameObject:
   - component: {fileID: 2095612398}
   - component: {fileID: 2095612397}
   - component: {fileID: 2095612396}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
