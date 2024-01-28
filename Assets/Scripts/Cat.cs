@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Cat : MonoBehaviour
 {
@@ -26,6 +27,9 @@ public class Cat : MonoBehaviour
     int currentPlayer=1;
     public float minSwapTime;
     public float maxSwapTime;
+
+    float kills = 0;
+    public TMP_Text killsText;
 
     [Header("Dash")]
     public float dashForce;
@@ -124,6 +128,9 @@ public class Cat : MonoBehaviour
     public void VacuumRecharge()
     {
         ammo += ammoVacuumRecharge;
+
+        kills++;
+        killsText.text = kills + " dust rats murdered";
     }
 
     private void Fire()

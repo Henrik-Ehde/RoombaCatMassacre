@@ -19,8 +19,7 @@ public class Roomba : MonoBehaviour
 
     public float lives = 9;
     public TMP_Text livesText;
-    float kills = 0;
-    public TMP_Text killsText;
+
 
     int currentPlayer=0;
 
@@ -81,7 +80,6 @@ public class Roomba : MonoBehaviour
 
     public void Dash(float force, float direction)
     {
-        Debug.Log("Roomba Dashes");
         rb.AddForce(transform.right * force * direction, ForceMode.Impulse);
     }
 

@@ -133,7 +133,8 @@ public class BasicEnemyController : MonoBehaviour
 
             else
             {
-                other.GetComponentInParent<Cat>().VacuumRecharge();
+                Cat cat = other.GetComponentInParent<Cat>();
+                cat.VacuumRecharge();
                 Destroy(gameObject);
 
                 AudioManager.Instance.PlaySoundBaseAtPos(deathSound, transform.position, transform.name);

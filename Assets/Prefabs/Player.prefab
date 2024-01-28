@@ -371,6 +371,7 @@ MonoBehaviour:
   ammoVacuumRecharge: 16
   minSwapTime: 10
   maxSwapTime: 20
+  killsText: {fileID: 0}
   dashForce: 70
   dashCooldown: 4
   fireSounds:
