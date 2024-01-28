@@ -96,7 +96,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 0.2, z: 2}
+  m_Size: {x: 2, y: 0.5, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &569952876758510934
 GameObject:
@@ -124,7 +124,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 569952876758510934}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.3, y: 0.55, z: 0.58}
+  m_LocalPosition: {x: 0.3, y: 0.34, z: 0.58}
   m_LocalScale: {x: 0.24000046, y: 0.53, z: 0.24000046}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -342,8 +342,8 @@ MonoBehaviour:
   lives: 9
   livesText: {fileID: 0}
   duration: 0.7
-  shots: 8
-  spread: 120
+  shots: 10
+  spread: 90
   cooldown: 4
 --- !u!114 &569952877278693276
 MonoBehaviour:

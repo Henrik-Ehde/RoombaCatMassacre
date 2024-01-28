@@ -106,7 +106,6 @@ public class Cat : MonoBehaviour
 
         while (t<duration)
         {
-
             cat.Rotate(0, direction * spread * Time.deltaTime / duration , 0);
 
             if (t > nextShotTime)

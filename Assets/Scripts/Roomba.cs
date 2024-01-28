@@ -19,6 +19,8 @@ public class Roomba : MonoBehaviour
 
     public float lives = 9;
     public TMP_Text livesText;
+    float kills = 0;
+    public TMP_Text killsText;
 
     int currentPlayer=0;
 
