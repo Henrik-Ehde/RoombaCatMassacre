@@ -49,4 +49,4 @@ MonoBehaviour:
   enemiesContainer: {fileID: 0}
   spawnerContainer: {fileID: 0}
   spawnRate: 2
-  rateIncrease: 0.35
+  rateIncrease: 0.15

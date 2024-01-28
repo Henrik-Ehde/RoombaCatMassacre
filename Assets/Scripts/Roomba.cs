@@ -6,6 +6,7 @@ using TMPro;
 public class Roomba : MonoBehaviour
 {
     public Rigidbody rb;
+    public Cat cat;
     public float rotationRate;
     public float smoothRotation;
     float rotation;
@@ -16,23 +17,28 @@ public class Roomba : MonoBehaviour
     public float iFrames;
     public bool hittable;
 
+    public float lives = 9;
     public TMP_Text livesText;
 
     int currentPlayer=0;
 
+    [Header("Spray")]
+    public float duration = 0.7f;
+    public int shots = 8;
+    public float spread = 120;
+    public float cooldown;
+    float sprayReadyTime;
 
 
-    public float lives = 9;
-    // Start is called before the first frame update
     public void SwapPlayer()
     {
         currentPlayer++;
         currentPlayer %= 2;
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
+
         float rotationInput = Input.GetAxis("Horizontal"+currentPlayer);
         rotation = Mathf.Lerp(rotation, rotationRate * rotationInput, smoothRotation * Time.deltaTime);
         transform.Rotate(0, rotation * Time.fixedDeltaTime, 0);
@@ -46,6 +52,11 @@ public class Roomba : MonoBehaviour
         if (rotationInput != 0) force *= speedWhileRotating;
 
         rb.AddForce(transform.forward * force);
+
+        if (Input.GetAxis("Special" + currentPlayer) != 0 && Time.time > sprayReadyTime)
+        {
+            Spray();
+        }
     }
 
     public void Damage()
@@ -54,10 +65,24 @@ public class Roomba : MonoBehaviour
         {
             lives -= 1;
             //if (lives< 1) Die();
-            //livesText.text = "Lives: " + lives;
+            livesText.text = lives + " lives";
             StartCoroutine(Invulnerable());
         }
     }
+
+    void Spray()
+    {
+        float direction = Input.GetAxis("Special" + currentPlayer);
+        cat.StartCoroutine(cat.Spray(duration, shots, spread, direction));
+        sprayReadyTime += cooldown;
+    }
+
+    public void Dash(float force, float direction)
+    {
+        Debug.Log("Roomba Dashes");
+        rb.AddForce(transform.right * force * direction, ForceMode.Impulse);
+    }
+
 
     IEnumerator Invulnerable()
     {
