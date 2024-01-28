@@ -119,8 +119,7 @@ public class Cat : MonoBehaviour
             yield return null;
         }
 
-
-
+        spraying = false;
     }
 
     public void VacuumRecharge()
