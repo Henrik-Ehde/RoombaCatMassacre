@@ -49,7 +49,7 @@ public class Cat : MonoBehaviour
 
     IEnumerator PlayerSwapping()
     {
-        if (Random.value < 0.5) SwapPlayer();
+        //if (Random.value < 0.5) SwapPlayer();
         
         while (true)
         {
@@ -60,7 +60,7 @@ public class Cat : MonoBehaviour
 
             yield return new WaitForSeconds(3);
 
-            SwapPlayer();
+            //SwapPlayer();
         }
     }
 

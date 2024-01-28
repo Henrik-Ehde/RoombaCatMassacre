@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: -3487863493074568607}
   enemyContainer: {fileID: 0}
-  collisionForce: 300
+  collisionForce: 400
   targetPosition: {x: 0, y: 0, z: 0}
   bigAcceleration: 16
   smallAcceleration: 8
@@ -190,7 +190,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!135 &198566280952385669
 SphereCollider:
   m_ObjectHideFlags: 0

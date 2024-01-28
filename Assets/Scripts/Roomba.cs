@@ -86,6 +86,7 @@ public class Roomba : MonoBehaviour
     public void Dash(float force, float direction)
     {
         rb.AddForce(transform.right * force * direction, ForceMode.Impulse);
+        StartCoroutine(Invulnerable());
     }
 
 
