@@ -338,13 +338,56 @@ MonoBehaviour:
   reverseAcceleration: 50
   speedWhileRotating: 0.2
   iFrames: 1
-  hittable: 0
+  hittable: 1
   lives: 9
   livesText: {fileID: 0}
   duration: 0.7
   shots: 10
-  spread: 60
+  spread: 100
   cooldown: 4
+  hurtSounds:
+    outputAudioMixerGroup: {fileID: -2943796677340469798, guid: 7aa78db08ded64c47bf4c1777f41e336, type: 2}
+    useDefaultSettings: 1
+    soundSettings:
+      priority: 128
+      loop: 0
+      volume: 1
+      randomizeVolume: 0
+      volumeRandomRange: {x: 0.8, y: 1}
+      pitch: 1
+      randomizePitch: 0
+      pitchRandomRange: {x: 0.8, y: 1.1}
+      spatialBlend: 0.5
+      spread: 0
+      bufferTime: 0
+      lastTriggeredTime: 50000
+    audioSourceInUse: {fileID: 0}
+    containerName: Player_HurtSounds
+    clipsInContainer:
+    - {fileID: 8300000, guid: ed1a5b8bb407d9043b3ec280ae362802, type: 3}
+    - {fileID: 8300000, guid: 4d7573f5102ddc8498ef0a30e7bc47b8, type: 3}
+    containerType: 3
+    loopContainer: 0
+    isPlaying: 0
+    shouldPlay: 0
+  gameOverSound:
+    outputAudioMixerGroup: {fileID: -2943796677340469798, guid: 7aa78db08ded64c47bf4c1777f41e336, type: 2}
+    useDefaultSettings: 1
+    soundSettings:
+      priority: 128
+      loop: 0
+      volume: 1
+      randomizeVolume: 0
+      volumeRandomRange: {x: 0.8, y: 1}
+      pitch: 1
+      randomizePitch: 0
+      pitchRandomRange: {x: 0.8, y: 1.1}
+      spatialBlend: 0.5
+      spread: 0
+      bufferTime: 0
+      lastTriggeredTime: 50000
+    audioSourceInUse: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 57f8ea40185549044b42ee7e9e3105a9, type: 3}
 --- !u!114 &569952877278693276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,7 +423,7 @@ MonoBehaviour:
     soundSettings:
       priority: 128
       loop: 0
-      volume: 1
+      volume: 0.769
       randomizeVolume: 0
       volumeRandomRange: {x: 0.8, y: 1}
       pitch: 1
@@ -402,6 +445,96 @@ MonoBehaviour:
     loopContainer: 0
     isPlaying: 0
     shouldPlay: 0
+  swapAnnounceSound:
+    outputAudioMixerGroup: {fileID: -2943796677340469798, guid: 7aa78db08ded64c47bf4c1777f41e336, type: 2}
+    useDefaultSettings: 1
+    soundSettings:
+      priority: 128
+      loop: 0
+      volume: 1
+      randomizeVolume: 0
+      volumeRandomRange: {x: 0.8, y: 1}
+      pitch: 1
+      randomizePitch: 0
+      pitchRandomRange: {x: 0.8, y: 1.1}
+      spatialBlend: 0.5
+      spread: 0
+      bufferTime: 0
+      lastTriggeredTime: 50000
+    audioSourceInUse: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 77770e07f1c32fe419602708165c2125, type: 3}
+  ramboFireSound:
+    outputAudioMixerGroup: {fileID: -2943796677340469798, guid: 7aa78db08ded64c47bf4c1777f41e336, type: 2}
+    useDefaultSettings: 1
+    soundSettings:
+      priority: 128
+      loop: 0
+      volume: 1
+      randomizeVolume: 0
+      volumeRandomRange: {x: 0.8, y: 1}
+      pitch: 1
+      randomizePitch: 0
+      pitchRandomRange: {x: 0.8, y: 1.1}
+      spatialBlend: 0.5
+      spread: 0
+      bufferTime: 0
+      lastTriggeredTime: 50000
+    audioSourceInUse: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: a9d764942238183488974754d39c0fd8, type: 3}
+  vaccuumReadySound:
+    outputAudioMixerGroup: {fileID: -2943796677340469798, guid: 7aa78db08ded64c47bf4c1777f41e336, type: 2}
+    useDefaultSettings: 1
+    soundSettings:
+      priority: 128
+      loop: 0
+      volume: 1
+      randomizeVolume: 0
+      volumeRandomRange: {x: 0.8, y: 1}
+      pitch: 1
+      randomizePitch: 0
+      pitchRandomRange: {x: 0.8, y: 1.1}
+      spatialBlend: 0.5
+      spread: 0
+      bufferTime: 0
+      lastTriggeredTime: 50000
+    audioSourceInUse: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 6e8f7bfc723bc794aa2deee49475ad97, type: 3}
+  dashSound:
+    outputAudioMixerGroup: {fileID: -2943796677340469798, guid: 7aa78db08ded64c47bf4c1777f41e336, type: 2}
+    useDefaultSettings: 1
+    soundSettings:
+      priority: 128
+      loop: 0
+      volume: 1
+      randomizeVolume: 0
+      volumeRandomRange: {x: 0.8, y: 1}
+      pitch: 1
+      randomizePitch: 0
+      pitchRandomRange: {x: 0.8, y: 1.1}
+      spatialBlend: 0.5
+      spread: 0
+      bufferTime: 0
+      lastTriggeredTime: 50000
+    audioSourceInUse: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 81cc3c803218ee445a8dfe12631c026d, type: 3}
+  suckSound:
+    outputAudioMixerGroup: {fileID: -2943796677340469798, guid: 7aa78db08ded64c47bf4c1777f41e336, type: 2}
+    useDefaultSettings: 1
+    soundSettings:
+      priority: 128
+      loop: 0
+      volume: 1
+      randomizeVolume: 0
+      volumeRandomRange: {x: 0.8, y: 1}
+      pitch: 1
+      randomizePitch: 0
+      pitchRandomRange: {x: 0.8, y: 1.1}
+      spatialBlend: 0.5
+      spread: 0
+      bufferTime: 0
+      lastTriggeredTime: 50000
+    audioSourceInUse: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 95862fc2de068c14ca9c317b9be372bd, type: 3}
 --- !u!54 &569952877278693277
 Rigidbody:
   m_ObjectHideFlags: 0
